@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <form id="contact-form" novalidate>
+        <h1>Contact Us</h1>
+        <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required aria-required="true">
+            <span class="error" id="firstNameError">Please Enter Your First Name</span>
+        </div>
+
+        <div class="form-group">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required aria-required="true">
+            <span class="error" id="lastNameError">Please Enter Your Last Name</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="text" id="email" name="email" required aria-required="true">
+            <span class="error" id="emailError">Please Enter Valid Email ID</span>
+        </div>
+
+        <div class="form-group">
+            <label for="query-type">Query Type *</label>
+            <div class="radio-group">
+                <label class="queryCheck">
+                    <input class="radioCheck" type="radio" name="query-type" value="general-enquiry" required aria-required="true">
+                    General Enquiry
+                </label>
+                <label class="queryCheck">
+                    <input class="radioCheck" type="radio" name="query-type" value="support-request" required aria-required="true">
+                    Support Request
+                </label>
+            </div>
+            <span class="error" id="queryTypeError">Please Select a query type</span>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required aria-required="true"></textarea>
+            <span class="error" id="messageError">Please Enter your message</span>
+        </div>
+
+        <div class="form-group">
+            <label id="consentText">
+                <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                I consent to being contacted by the team *
+            </label>
+            <span class="error" id="consentError">Please Select consent checkbox</span>
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
